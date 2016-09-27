@@ -17,8 +17,8 @@ DEPENDS = "systemd dbus"
 
 inherit systemd
 
-do_install_append() {
-    install -Dm0644 ${S}/dbus-session@.service \
+do_install() {
+        install -Dm0644 ${S}/dbus-session@.service \
         ${D}/${base_libdir}/systemd/system/dbus-session@.service
 }
 
